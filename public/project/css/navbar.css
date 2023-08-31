@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans+Condensed:ital,wght@0,200;0,400;0,800;1,600;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Foldit:wght@200;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,200;0,300;0,400;0,600;0,900;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monomaniac+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Codystar:300&display=swap');
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+
+
+}
+
+body {
+    position: relative;
+    background-color: #000000;
+ }
+ nav{
+    background-image: radial-gradient(at bottom ,rgba(227, 218, 218, 0.27),rgb(4, 4, 4));
+ }
+ 
+ nav a span:nth-child(1){
+    color: rgb(249, 133, 0);
+    font-family: 'Bitter', serif;
+ }
+ nav a span:nth-child(2){
+    
+    color: transparent;
+    font-family: 'Bitter', serif;
+    
+ }
+ 
+ nav a span:nth-child(2)::before{
+    content: "TRADERS";
+    background: linear-gradient(to bottom, rgba(255, 254, 254, 0.966), #f1eae4, rgb(237, 68, 7));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+ }
+ 
+
+ 
+
+#login-button {
+    --glow-color: rgba(28, 113, 204, 0.845);
+    --glow-spread-color: rgba(121, 219, 216, 0.647);
+    --enhanced-glow-color: rgb(19, 87, 204);
+    --btn-color: rgba(8, 8, 8, 0.684);
+    border: .25em solid var(--glow-color);
+    padding: 0.5em 1.5em;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    font-weight: bold;
+    background-color: var(--btn-color);
+    border-radius: .8em;
+    outline: none;
+    text-shadow: 0 0 .2em var(--glow-color);
+    position: relative;
+    transition: all 0.3s;
+    box-sizing: border-box;
+   }
+ 
+   
+   #login-button:hover {
+    color: var(--btn-color);
+    background-color: var(--glow-color);
+    box-shadow: 0 0 1em .25em var(--glow-color),
+           0 0 4em 2em var(--glow-spread-color),
+           inset 0 0 .75em .25em var(--glow-color);
+   }
+   
+   #login-button:active {
+    box-shadow: 0 0 0.6em .25em var(--glow-color),
+           0 0 2.5em 2em var(--glow-spread-color),
+           inset 0 0 .5em .25em var(--glow-color);
+   }
+
+
+   .neons {
+   
+      text-align: center;
+   
+   
+   }
+   .neons hr{
+      width:100%;
+      margin:0 auto 10px auto;
+      height:3px; /* set the height of the hr */
+      border: none; /* remove the default border */
+      background: white;
+    color: white;
+   }
+   .container-neon{
+      overflow: hidden;
+      height: 50px;
+   
+   }
+   
+   .neons div {
+      
+      background-color: #000;
+      border-top: 0.5px groove;
+     
+     font-size: 2rem;
+     text-align: center;
+      font-weight: bold;
+     -webkit-animation: glow 3s ease-in-out infinite alternate;
+     -moz-animation: glow 3s ease-in-out infinite alternate;
+     animation: glow 3s ease-in-out infinite alternate;
+   }
+   
+   @keyframes glow {
+        from {
+         color: #f48b0b;
+       text-shadow: 0 0 10px #4f564e, 0 0 20px #bfcccb, 0 0 30px #ebeeee, 0 0 40px #fcfcfc, 0 0 50px;
+     }
+     
+     to {
+        color: rgb(249, 249, 249);
+       text-shadow: 0 0 20px #00fff2, 0 0 30px #00fff2, 0 0 40px #00fff2, 0 0 50px #00fff2, 0 0 60px #00fff2, 0 0 70px #00fff2, 0 0 80px #00fff2, 0 1 90px #00fff2;
+     }
+   }
+   
+
+
+
+   #hidden-btn{
+      display: none;
+   }
+   
+   @media screen and (max-width: 767px) {
+      #hidden-btn{
+         display: inline;
+      }
+      #login-button{
+         display: none;
+      }
+      
+}
+
+/* Tablets and Small Desktops */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+}
+
+/* Large Desktops and Laptops */
+@media screen and (min-width: 1024px) {
+ 
+}
+
+
+
+
+

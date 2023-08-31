@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+     box-sizing: border-box;
+}
+
+body{
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.brand-name a span:nth-child(1){
+    color: rgb(249, 133, 0);
+    font-family: 'Bitter', serif;
+ }
+ .brand-name a span:nth-child(2){
+    color: transparent;
+    font-family: 'Bitter', serif;
+ }
+ 
+ .brand-name a span:nth-child(2)::before{
+    content: "TRADERS";
+    background: linear-gradient(to bottom, rgba(255, 254, 254, 0.966), #f1eae4, rgb(237, 68, 7));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+ }
+.brand-name{
+    text-align:center;
+    color:white;
+    font-size:1.5rem;
+    margin:1vh 0 0 5vh;
+}
+.huge-container{
+    display: flex;
+}
+
+.large-part1{
+    width: 20vw!important;
+    background-color: black;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.large-part1 .div1{
+    display: flex;
+    flex-direction: column;
+}
+.div1{
+    margin-top: 5vh;
+}
+.div1 >div {
+    color: white;
+    min-height: 30px;
+    margin: 10px ;
+    text-align: center  ;
+    border: 2px solid white;
+}
+.large-part1 a{
+    text-decoration: none;
+}
+
+
+
+.large-part2{
+    width: 80vw!important;
+    background-color: rgb(233, 218, 218);
+    display: flex;
+    flex-direction: column;
+}
+
+.photo-nav{
+    height: 50px!important;
+    width: 50px!important;
+}
+
+.photo-navb{
+    height: 50px!important;
+    width: 50px!important;
+}
+
+.photo-navb img{
+    height: 50px!important;
+    width: 50px!important;
+}
+
+
+#logout{
+    margin-left: 50px;
+}
+/* /////// extras  */
+
+.popup-container {
+    position: fixed;
+    bottom: 15%;
+    right: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    display: none;
+    z-index: 9998;
+    border-radius: 10px;
+    font-family: 'Bebas Neue', sans-serif;
+   
+}
+.popup-container input{
+    height: 50px;
+}
+#supportForm{
+    display: flex;
+    flex-direction: column;
+    
+
+}
+
+#supportButton {
+    position: fixed;
+    padding: 10px 25px;
+    border-radius: 25px;
+    bottom: 4.3%;
+    right: 20px;
+    font-size: 14px;
+    z-index: 9999;
+    font-weight: 500;
+    font-size: 15px;
+}
+

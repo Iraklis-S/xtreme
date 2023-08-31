@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Diphylleia&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbit&display=swap');
+.forum-main{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Diphylleia', serif;
+}
+.forum-head{
+    text-align: center;
+    font-family: 'Diphylleia', serif;
+}
+.forum-head h2{
+    font-family: 'Orbit', sans-serif;
+}
+
+.forum-main h3{
+    font-family: 'Orbit', sans-serif;
+}
+
+#author{
+    font-family: 'Diphylleia', serif;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.btn-create {
+    position: fixed;
+  bottom:5%;
+  right: 40%;
+  transform: translate(50%);
+   
+}
+
+.btns{
+    width: 200px;
+    margin: 5px;
+    
+}
+
+.btns.edit{
+    position: fixed;
+    bottom:0%;
+    right: 40%;
+}
+
+.btns.delete{
+    position: fixed;
+    bottom:0%;
+    right: 25%;
+}
+.btns.back{
+    position: fixed;
+    top:10%;
+    left: 20%;
+    text-decoration: none;
+}
+
+.post-content{
+    height: 60%;
+    width: 70%;
+   
+    margin:5% auto;
+    display: flex;
+    border-radius: 10px;
+    align-items: center;
+    flex-direction: column;
+}
+.post-content .head-part{
+    border-bottom: 1px solid white;
+    width: 100%;
+    text-align: center;
+    font-family: 'Orbit', sans-serif;
+    border: 1px solid white;
+}
+.post-content .para{
+    width: 100%;
+    padding: 20px;
+    font-family: 'Orbit', sans-serif;
+    border: 1px solid white;
+}
+
+
+.create-form {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    border: 1px solid black;
+    padding: 5% 10%;
+    background-color: #9a8c98;
+    border-radius: 5px;
+}
+.create-form input{
+    width:400px;
+    border-radius: 5px;
+    padding: 5px;
+}
+.create-form textarea{
+    width:400px;
+    height: 280px;
+    border-radius: 5px;
+    border: 2px solid black;
+   
+}
+.create button{
+    padding:5px;
+    border-radius: 5px;
+    background-color: #f2e9e4;
+}
+.create h2 {
+    text-align: center;
+    font-family: 'Orbit', sans-serif;
+}

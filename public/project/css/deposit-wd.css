@@ -1,0 +1,101 @@
+ /* Form Container */
+ .form-container {
+    width: 80%;
+      margin: 1% auto;
+      padding: 30px;
+      background-color: #f9f9f9;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+  }
+
+  /* Form Inputs */
+  .form-container form {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+  }
+
+  .form-container form div {
+      width: 24%;
+  }
+
+  .form-container form input[type="number"],
+  .form-container form input[type="text"],
+  .form-container form select,
+  .form-container form textarea {
+      width: 100%;
+      padding: 15px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      font-size: 16px;
+  }
+
+  /* Transaction Type Container */
+  .transaction-type-container {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+  }
+
+  .transaction-type-container label {
+      margin-right: 10px;
+  }
+
+  /* Submit Button */
+  .form-container input[type="submit"] {
+      width: 100%;
+      padding: 12px;
+      background-color: #4caf50;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+  }
+
+  .form-container input[type="submit"]:hover {
+      background-color: #45a049;
+  }
+
+  /* Form Field Label */
+  .form-container label {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 5px;
+  }
+
+  .requests-container {
+    margin-top: 20px;
+    width: 70%;
+    margin: 0 auto; /* Center the container */
+}
+
+
+.request {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.request-item {
+    margin-bottom: 5px;
+}
+
+.request-label {
+    font-weight: bold;
+}
+
+h1{
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}

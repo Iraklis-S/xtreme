@@ -1,0 +1,126 @@
+.container {
+  margin-top: 12vh;
+display: flex;
+text-align: center;
+justify-content: center;
+
+align-items: center;
+
+}
+.form {
+    background-color: white;
+    padding: 3.125em;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 5px 5px 15px -1px rgba(0,0,0,0.75);
+    width: 60%;
+  
+  }
+  
+  
+  .signup {
+    color: rgb(77, 75, 75);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: block;
+    font-weight: bold;
+    font-size: x-large;
+    margin-bottom: 0.5em;
+  }
+  
+  .form--input {
+    width: 50%!important;
+    margin-bottom: 1.25em;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    padding: 0.8em;
+    font-family: 'Inter', sans-serif;
+    outline: none;
+  }
+  
+  .form--input:focus {
+    border: 1px solid #639;
+    outline: none;
+  }
+  
+  .form--marketing {
+    display: flex;
+    margin-bottom: 1.25em;
+   
+  }
+  
+ 
+
+  
+  .form--submit {
+    width: 50%;
+    padding: 0.625em;
+    border-radius: 5px;
+    color: white;
+    background-color: #639;
+    border: 1px dashed #639;
+    cursor: pointer;
+  }
+  
+  .form--submit:hover ,  .form--submit:focus{
+    color: #639;
+    background-color: rgba(235, 219, 219, 0.562);
+    border: 1px dashed #639;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+
+
+.container a{
+  background-color: black;
+  padding: 5px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+.container a span:nth-child(1){
+    color: rgb(249, 133, 0);
+    font-family: 'Bitter', serif;
+ }
+ .container a span:nth-child(2){
+    
+    color: transparent;
+    font-family: 'Bitter', serif;
+    
+ }
+ 
+a span:nth-child(2)::before{
+    content: "TRADERS";
+    background: linear-gradient(to bottom, rgba(255, 254, 254, 0.966), #f1eae4, rgb(237, 68, 7));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+ }
+ 
+
+
+ 
+ @media screen and (max-width: 767px) {
+  form.form{
+    width: 100%;
+    padding: 0;
+  }
+  form.form input{
+    width: 80%;
+  }
+  form.form a{
+    display: none;
+  }
+}
+
+/* Tablets and Small Desktops */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+}
+
+/* Large Desktops and Laptops */
+@media screen and (min-width: 1024px) {
+
+}

@@ -1,0 +1,198 @@
+
+.container-for-markets{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+ 
+.mySwiper{
+    overflow: hidden!important;
+    width: 94%;
+    height: 14vh;
+}
+.swiper-wrapper{
+    width: 100%;
+}
+.swiper-slide{
+    width: 30%;
+    text-align: center;
+    border: 1px solid black;
+
+} 
+
+.swiper-slide img{
+    width: 70%;
+}
+
+.market{
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.two-inside{
+    display: flex;
+    width: 94%;
+}
+
+.tradingview-widget-container{
+    margin-top: 1%;
+    padding: 0;
+    border: 1px solid  black ;
+    box-sizing: border-box;
+    width: 80%;
+ }
+ .tradingview-widget-copyright{
+    display: none;
+ }
+ 
+ #tradingview_f644a {
+ 
+    width: 100%;
+    height:60vh;
+    object-fit: cover;
+    object-position: center right;
+    box-sizing: border-box;
+    padding:2px;
+    background-color: #000;
+    border-radius: 10px;
+    box-sizing: border-box;
+ }
+ 
+/*  Contact Button */
+#supportButton {
+    position: fixed;
+    padding: 10px 25px;
+    border-radius: 25px;
+    bottom: 1%;
+    right: 20px;
+    font-size: 14px;
+    z-index: 9999;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+
+
+
+.trade-options {
+    
+    width: 20%;
+    margin-top: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.trade-options form{
+    background-color: black;
+    border-radius: 5px;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    color: white;
+    margin:5% 0 0 3%;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+}
+.trade-options form > div{
+    margin-right:  10px;
+}
+.trade-options form button{
+    margin: 20px 5px;
+padding: 5px 15px;
+border-radius: 5px;
+font-weight: 600;
+}
+.width-class{
+    width: 100%;
+}
+
+.width-class select{
+    text-align: center;
+    width: 90%;
+}
+#quantity{
+    padding: 5px;
+    border-radius: 5px;
+    width: 90%;
+    text-align: center;
+}
+
+select{
+    padding:5px;
+    border-radius: 5px;
+}
+button[value="buy"] {
+    width:40%;
+    background-color: rgb(25, 236, 6);
+}
+button[value="sell"] {
+    background-color: red;
+    width:40%;
+}
+
+.bottom{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 25%;
+    right: 2.5%;
+    border: 1px solid rgb(255, 255, 255);
+    padding: 3px;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    width: 14%;
+}
+.bottom a{
+
+    text-decoration: none;
+}
+.o-trade{
+   
+border-bottom: 1px solid rgb(255, 255, 255);
+}
+.leverage{
+    border: 1px solid rgb(255, 255, 255);
+    width: 95%;
+}
+/* OPEN TRADES PAGE */
+.open-trades{
+    height: 90%;
+}
+.open-trades .head{
+    font-family: 'Orbit',sans-serif;
+    text-align: center;
+}
+
+.trades-table{
+    text-align: center;
+    width: 95%;
+    margin: 0 auto;
+    height: 80%;
+  border-radius: 20px;
+
+}
+
+.trades-table table {
+    width: 100%;
+    border: 1px solid black;
+}
+.trades-table thead{
+    background-color: wheat;
+    border: 1px solid black;
+}
+td{
+    border: 1px solid black;
+}
+#close-btn{
+    padding: 2px 5px;
+    border-radius: 5px;
+}
