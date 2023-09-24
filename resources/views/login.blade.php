@@ -30,7 +30,7 @@
              @endif
                 <div>
                     <label for="user-name">Username</label><br>
-                    <input type="text" id="user-name" name="user_name">
+                    <input type="text" id="user-name" name="email">
                 </div>
                 <div>
                     <label for="password-login">Password</label><br>

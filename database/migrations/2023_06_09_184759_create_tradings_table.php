@@ -19,6 +19,8 @@ return new class extends Migration
             $table->unsignedInteger('quantity');
             $table->string('action');
             $table->decimal('profit', 12, 4)->nullable();
+            $table->decimal('take_profit',12,4)->nullable();
+            $table->decimal('stop_loss',12,4)->nullable();
             $table->timestamps();
             $table->foreign('user_account_id')->references('id')->on('user_accounts');
         });

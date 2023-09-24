@@ -52,6 +52,18 @@ return [
     */
 
     'channels' => [
+        'check-profit-cmd' => [
+            'driver' => 'daily',
+            'path' => storage_path('logs/commands.log'),
+            'level' => 'info',
+            'days' => 14,
+        ],
+        'price-mail-cmd' => [
+            'driver' => 'daily',
+            'path' => storage_path('logs/mail-commands.log'),
+            'level' => 'info',
+            'days' => 14,
+        ],
         'stack' => [
             'driver' => 'stack',
             'channels' => ['single'],

@@ -2,11 +2,13 @@
 
 use App\Models\User;
 use App\Http\Controllers\Controller;
-use App\Http\Controllers\ForecastsController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BaseController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\TradeController;
+use App\Http\Controllers\ForecastsController;
+use App\Http\Controllers\PusherController;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 /*
@@ -22,34 +24,41 @@ use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 
 //MPA ROUTES
-Route::get('/', [Controller::class, 'index'])->name('home');
-Route::get('about',[Controller::class,'retrieveReviews']);
-Route::get('contact-page',fn() => view('contact-page'))->name('contact');
-Route::get('accounts',fn() =>  view('accounts'));
-Route::get('register',fn()=> view('register'));
-Route::post('register',[Controller::class,'register']);
-Route::post('login',[Controller::class,'login'])->name('login');
-Route::get('login',[Controller::class,'loginPage']);
-Route::post('contacted',[UserController::class,'contactPage']);
+Route::get('/', [BaseController::class, 'index'])->name('home');
+Route::get('about', [BaseController::class, 'retrieveReviews']);
+Route::get('contact-page', fn () => view('contact-page'))->name('contact');
+Route::get('accounts', fn () =>  view('accounts'));
+Route::get('register', fn () => view('register'));
+Route::post('register', [BaseController::class, 'register']);
+Route::post('login', [BaseController::class, 'login'])->name('login');
+Route::get('login', [BaseController::class, 'loginPage']);
+Route::post('contacted', [BaseController::class, 'contactPage']);
 
 
 // Logged in Routes
-Route::middleware('auth')->group(function () {
-Route::get('dashboard',function(){ return view('auth-views.dashboard');})->name('dashboard');
-Route::get('charts',function(){ return view('auth-views.charts');})->name('charts');
-Route::get('deposit-wd',[UserController::class,'requestsList'])->name('deposit-wd');
-Route::get('profile',function (){ return view('auth-views.profile');});
-Route::post('profile-pfp', [UserController::class, 'savePfp'])->name('profile-pfp');
-Route::post('/logout',[Controller::class,'logout']);
-Route::get('support',function(){ return view('auth-views.support');})->name('support-get');
-Route::post('support',[UserController::class,'contact'])->name('support');
-Route::post('save-request-to-db',[UserController::class,'saveDepositWd']);
-Route::get('/chart-data', [UserController::class, 'getChartData']); //for balance data chart.js
-});
-Route::post('/verification-documents', [UserController::class,'storeDocs'])->name('verification-documents.store');
+Route::middleware('auth:web')->group(function () {
+    
+    Route::get('dashboard', function () {
+        return view('auth-views.dashboard');
+    })->name('dashboard');
+    Route::get('charts',[TradeController::class,'charts'])->name('charts');
+    Route::get('deposit-wd', [UserController::class, 'requestsList'])->name('deposit-wd');
+    Route::get('profile', function () {
+        return view('auth-views.profile');
+    });
+    Route::post('profile-pfp', [UserController::class, 'savePfp'])->name('profile-pfp');
+    Route::post('/logout', [BaseController::class, 'logout']);
+    Route::get('support', function () {
+        return view('auth-views.support');
+    })->name('support-get');
+    Route::post('support', [UserController::class, 'contact'])->name('support');
+    Route::post('save-request-to-db', [UserController::class, 'saveDepositWd']);
+    Route::get('/chart-data', [UserController::class, 'getChartData']); //for balance data chart.js
 
-//FORUM ROUTES 
-Route::middleware('auth')->group(function () {
+    Route::post('/verification-documents', [UserController::class, 'storeDocs'])->name('verification-documents.store');
+
+    //FORUM ROUTES 
+
     Route::get('/forum', [PostController::class, 'index'])->name('forum.index');
     Route::get('/forum/create', [PostController::class, 'create'])->name('forum.create');
     Route::post('/forum', [PostController::class, 'store'])->name('forum.store');
@@ -58,14 +67,24 @@ Route::middleware('auth')->group(function () {
     Route::put('/forum/{post}', [PostController::class, 'update'])->name('forum.update');
     Route::delete('/forum/{post}', [PostController::class, 'destroy'])->name('forum.destroy');
 
+
+
+    //Trading 
+
+    Route::post('/trade', [TradeController::class, 'store'])->name('trade.store');
+    Route::get('/trades', [TradeController::class, 'showOpenTrades'])->name('trade.index');
+    Route::post('/trades/{id}/close', [TradeController::class, 'closeTrade'])->name('trade.close');
+    Route::get('/trade-history', [TradeController::class, 'showTradeHistory'])->name('trade.history');
+
+    //Signaling algo
+    Route::get('signals', [ForecastsController::class, 'index']);
+
+    //
+    Route::get('/trade-info/{tradeId}',[TradeController::class,'tradeInfo'])->name('trade.info');
 });
 
-//Trading 
 
-Route::post('/trade', [TradeController::class, 'store'])->name('trade.store');
-Route::get('/trades', [TradeController::class, 'showOpenTrades'])->name('trade.index');
-Route::post('/trades/{id}/close', [TradeController::class, 'closeTrade'])->name('trade.close');
-Route::get('/trade-history', [TradeController::class, 'showTradeHistory'])->name('trade.history');
 
-//Signaling algo
-Route::get('signals',[ForecastsController::class,'index']);
+Route::get('/pusher/home',[PusherController::class,'index']);
+Route::post('/pusher/receive',[PusherController::class,'receive']);
+Route::post('/pusher/broadcast',[PusherController::class,'broadcast']);

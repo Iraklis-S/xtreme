@@ -21,6 +21,7 @@
                 <th>Closing Price</th>
                 <th>Action</th>
                 <th>Profit</th>
+             
                 <!-- Add more columns as needed -->
             </tr>
         </thead>

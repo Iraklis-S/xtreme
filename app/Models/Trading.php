@@ -10,6 +10,9 @@ class Trading extends Model
     use HasFactory;
     protected $fillable = [
         'symbol',
+        'user_account_id',
+        'take_profit',
+        'stop_loss',
         'quantity',
         'action',
         'price',

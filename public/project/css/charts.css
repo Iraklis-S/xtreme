@@ -1,31 +1,49 @@
-
-.container-for-markets{
+#big-wrap{
+    display: flex;
+    width: 95%;
+    justify-content: center;
+    margin-left: 1%;
+    height: 14vh!important;
+}
+#big-wrap > #big-wrap:first-child{
+    width: 90%;
+}
+#update-chart{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 14vh!important;
+    margin-left: 5px;
+}
+#update-chart > input,#update-chart > button{
+    height:6vh;
+}
+.container-for-markets {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
- 
-.mySwiper{
-    overflow: hidden!important;
+
+.mySwiper {
+    overflow: hidden !important;
     width: 94%;
     height: 14vh;
 }
-.swiper-wrapper{
+.swiper-wrapper {
     width: 100%;
 }
-.swiper-slide{
+.swiper-slide {
     width: 30%;
     text-align: center;
     border: 1px solid black;
+}
 
-} 
-
-.swiper-slide img{
+.swiper-slide img {
     width: 70%;
 }
 
-.market{
+.market {
     height: 80%;
     display: flex;
     flex-direction: column;
@@ -33,35 +51,34 @@
     justify-content: flex-end;
 }
 
-.two-inside{
+.two-inside {
     display: flex;
     width: 94%;
 }
 
-.tradingview-widget-container{
+.tradingview-widget-container {
     margin-top: 1%;
     padding: 0;
-    border: 1px solid  black ;
+    border: 1px solid black;
     box-sizing: border-box;
     width: 80%;
- }
- .tradingview-widget-copyright{
+}
+.tradingview-widget-copyright {
     display: none;
- }
- 
- #tradingview_f644a {
- 
+}
+
+#tradingview_f644a {
     width: 100%;
-    height:60vh;
+    height: 60vh;
     object-fit: cover;
     object-position: center right;
     box-sizing: border-box;
-    padding:2px;
+    padding: 2px;
     background-color: #000;
     border-radius: 10px;
     box-sizing: border-box;
- }
- 
+}
+
 /*  Contact Button */
 #supportButton {
     position: fixed;
@@ -75,74 +92,73 @@
     font-size: 15px;
 }
 
-
-
-
 .trade-options {
-    
     width: 20%;
     margin-top: 5px;
     font-size: 16px;
     font-weight: 500;
     display: flex;
     flex-direction: column;
-    
 }
 
-.trade-options form{
+.trade-options form {
     background-color: black;
     border-radius: 5px;
     display: flex;
     width: 100%;
     flex-direction: column;
     color: white;
-    margin:5% 0 0 3%;
+    margin: 5% 0 0 3%;
     align-items: center;
     text-align: center;
     height: 100%;
 }
-.trade-options form > div{
-    margin-right:  10px;
+/*  */
+.trade-options form button {
+    margin: 1px 5px;
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-weight: 600;
 }
-.trade-options form button{
-    margin: 20px 5px;
-padding: 5px 15px;
-border-radius: 5px;
-font-weight: 600;
+.trade-options form input {
+    margin: 1px 0;
+    padding: 5px 5px;
+    border-radius: 5px;
+    font-weight: 600;
 }
-.width-class{
+.width-class {
     width: 100%;
 }
 
-.width-class select{
+.width-class select {
     text-align: center;
     width: 90%;
 }
-#quantity{
+#quantity {
     padding: 5px;
     border-radius: 5px;
     width: 90%;
     text-align: center;
 }
 
-select{
-    padding:5px;
+select {
+    padding: 5px;
     border-radius: 5px;
 }
 button[value="buy"] {
-    width:40%;
+    width: 40%;
     background-color: rgb(25, 236, 6);
 }
 button[value="sell"] {
     background-color: red;
-    width:40%;
+    width: 40%;
 }
 
-.bottom{
+.bottom {
     display: flex;
     flex-direction: column;
     position: absolute;
-    bottom: 25%;
+    bottom: 9%;
     right: 2.5%;
     border: 1px solid rgb(255, 255, 255);
     padding: 3px;
@@ -151,48 +167,46 @@ button[value="sell"] {
     font-size: 14px;
     width: 14%;
 }
-.bottom a{
-
+.bottom a {
     text-decoration: none;
 }
-.o-trade{
-   
-border-bottom: 1px solid rgb(255, 255, 255);
+.o-trade {
+    border-bottom: 1px solid rgb(255, 255, 255);
 }
-.leverage{
+.leverage {
     border: 1px solid rgb(255, 255, 255);
     width: 95%;
+    margin-left: 2.5%;
 }
 /* OPEN TRADES PAGE */
-.open-trades{
+.open-trades {
     height: 90%;
 }
-.open-trades .head{
-    font-family: 'Orbit',sans-serif;
+.open-trades .head {
+    font-family: "Orbit", sans-serif;
     text-align: center;
 }
 
-.trades-table{
+.trades-table {
     text-align: center;
     width: 95%;
     margin: 0 auto;
     height: 80%;
-  border-radius: 20px;
-
+    border-radius: 20px;
 }
 
 .trades-table table {
     width: 100%;
     border: 1px solid black;
 }
-.trades-table thead{
+.trades-table thead {
     background-color: wheat;
     border: 1px solid black;
 }
-td{
+td {
     border: 1px solid black;
 }
-#close-btn{
+#close-btn {
     padding: 2px 5px;
     border-radius: 5px;
 }

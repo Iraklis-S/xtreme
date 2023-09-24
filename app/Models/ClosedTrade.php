@@ -14,7 +14,9 @@ class ClosedTrade extends Model
         'trade_id',
     ];
     public function trade()
-{
-    return $this->belongsTo(Trading::class, 'trade_id');
-}
+    {
+        return $this->belongsTo(Trading::class, 'trade_id');
+    }
+    
+   
 }
